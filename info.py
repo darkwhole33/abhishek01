@@ -17,7 +17,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
-PICS = (environ.get('PICS', 'https://i.imgur.com/SiyTJxL.jpeg')).split()
+PICS = (environ.get('PICS', 'https://i.imgur.com/SiyTJxL.jpeg').split()
 
 
 # Admins & Users
@@ -45,7 +45,7 @@ reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002246174162')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # This Is Your Bot Support Group Id , Here Bot Will Not Give File Because This Is Support Group.
-support_chat_id = environ.get('SUPPORT_CHAT_ID', 'https://t.me/+DANk0HbAdSRjNWRl')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', 'https://t.me/moviename45')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
 # This Channel Is For Index Request 
@@ -166,7 +166,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
+URL = environ.get("URL", "")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
