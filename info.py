@@ -1,13 +1,15 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
-
 import re
 from os import environ
 from Script import script 
 
 id_pattern = re.compile(r'^.\d+$')
+def is_enabled(value, default):
+  if value.lower() in ["true", "yes", "1", "enable", "y"]:
+        return True
+    elif value.lower() in ["false", "no", "0", "disable", "n"]:
+        return False
+    else:
+        return default
 
 # Bot information
 SESSION = environ.get('SESSION', 'AkingBot')
@@ -15,8 +17,9 @@ API_ID = int(environ.get('API_ID', ' 24108883'))
 API_HASH = environ.get('API_HASH', '4ab873c28c27a4bc685e46bca9190b48')
 BOT_TOKEN = environ.get('BOT_TOKEN', "7913394311:AAH9lX0wZH2ZcTmhaBP1Te_OBLvwD2b-bbM")
 
-
-# This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
+#Bof settings
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://i.imgur.com/SiyTJxL.jpeg').split()
 
 
